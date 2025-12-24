@@ -34,7 +34,7 @@ Human intent flows through clarification, governed execution, and logging.
 The framework records specs, plans, validations, and handover artifacts.
 
 ## Quick start
-- Read `HUMAN_START_HERE.md` for the human entrypoint.
+- Read [`HUMAN_START_HERE.md`](HUMAN_START_HERE.md) for the human entrypoint.
 - Read `AGENTS.md` for the authoritative execution contract.
 - Select a stack profile in `docs/stacks/`.
 - Add tasks in chat or `todo-inbox.md`.
