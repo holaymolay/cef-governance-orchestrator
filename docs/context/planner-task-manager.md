@@ -12,6 +12,9 @@
     - {"event_type":"reasoning","skill_name":"forbid_cross_concept_reasoning","order":3,"guarantees":["no_cross_concept_dependencies"],"violations":[],"abort_reason":null}
   - Skill search: no applicable Skill (workflow governance / push enforcement).
   - Plan: 3-step plan recorded via Planner tool (assess current rules; implement script + docs; run audit/snapshot/logs).
+  - Progress: added `scripts/verify-sync.sh` plus advisory `scripts/git-hooks/post-commit-push-check.sh`; updated AGENTS/docs/agents + human workflow guide/glossary for push enforcement and `push_hash` run receipts; run-record schema/scripts now require `push_hash`.
+  - Progress: added workflow audit proposal/outcome entry with measured speed; swept inbox items into `todo.md` (branch default bug, todo-inbox housekeeping section, revision directory rename, and push/commit housekeeping).
+  - Progress: logged CHANGELOG/completed/handover updates, captured workflow revision `rev_010_current`, and added run receipt `runs/2025-12-28/7e772c91-05d7-4857-bb82-f1725a740260.jsonl` (push hash bccaacaa41a803e672e8f48c0c21c85226abf3c8).
 
 ## 2025-12-26T00:23:48-08:00 — Design Intent Schema concept
 - Summary: Establish a first-class Design Intent Schema concept with validation, docs, and tests.

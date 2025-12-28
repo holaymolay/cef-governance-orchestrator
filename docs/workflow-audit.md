@@ -70,8 +70,8 @@ Risks + rollback plan: Run receipts created before a push may need a follow-up a
 Date: 2025-12-27
 Change implemented: Added `scripts/verify-sync.sh`, an advisory post-commit hook, and governance updates requiring the pushed commit hash in run receipts, `completed.md`, and handovers.
 Outcome (success/failure/mixed): success
-Speed result (time-to-working result): pending (will capture after push timestamp).
-Accuracy result (first-pass success or fix-loop count): first-pass success; 0 fix loops so far.
+Speed result (time-to-working result): 13.9 minutes (ledger 2025-12-27T23:51:38-08:00 → commit 2025-12-28T00:05:31-08:00).
+Accuracy result (first-pass success or fix-loop count): first-pass success; 0 fix loops.
 Notes (what worked / what failed): End-of-task instructions now block completion without a push hash; the verifier covers dirty trees, missing upstreams, and ahead/behind/diverged states.
 Follow-up (if any): Monitor friction when creating run receipts; consider adding automation to append the push hash if receipts are generated before pushing.
 

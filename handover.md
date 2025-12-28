@@ -3,13 +3,16 @@
 **AI-managed file — humans should not edit this directly.** The agent keeps current state and next steps here.
 
 ## Current Focus
-- None (Design Intent Schema concept delivered; queue is clear).
+- Workflow governance: add a dedicated Housekeeping section to `todo-inbox.md`.
+- Workflow governance: rename `ai_workflow_revisions` to `framework_revisions` for clarity.
+- Bug backlog: default canonical branch choice should prefer `master` when prompted between `main` and `master` (captured in `todo.md`).
 
 ## State Snapshot
-- Governance files exist and todos are clear: `todo-inbox.md` is empty; `todo.md` has no pending tasks; `backlog.md` is empty; bugs are empty.
+- Todo lists are updated: `todo-inbox.md` is cleared; `todo.md` now tracks the branch-name bug and two workflow-governance items (housekeeping section + revision directory rename); Current Focus and Backlog are empty.
+- Post-task push enforcement tightened: `scripts/verify-sync.sh` blocks dirty/misaligned branches, run receipts require `push_hash`, and `scripts/git-hooks/post-commit-push-check.sh` provides an advisory warning. Governance docs (AGENTS + docs/agents) and the workflow audit log reflect the new checklist.
 - Design Intent Schema concept lives in `concepts/design-intent-schema/` with the JSON Schema in `schemas/design-intent.schema.json` and a fail-fast validator in `handlers/intent/validate.py`.
 - README governance docs now declare spec-driven generation, and `README_GOVERNANCE.md` is present.
-- Workflow snapshots are stored locally under `ai_workflow_revisions/`; `rev_009_current` captures the README governance updates (see `docs/workflow-revisions.md`).
+- Workflow snapshots are stored locally under `ai_workflow_revisions/`; `rev_010_current` captures the push-enforcement updates (see `docs/workflow-revisions.md`).
 - Clarifying docs for newcomers live in `docs/humans/glossary.md` and `docs/humans/concepts-map.md`, linked from README, HUMAN_START_HERE, and the wiki index.
 - Context management deep dive is in `docs/humans/context-management.md`, linked from README and the wiki index.
 - README quick start now highlights `HUMAN_START_HERE.md` as the first entrypoint.
@@ -18,7 +21,6 @@
 - README quick start now includes a plain-English note that the chat window stays lean because state is externalized (limits still apply).
 - README and human guides now include beginner-friendly entry points; cheat sheet links are surfaced for fast onboarding.
 - UI intent protocol concept is under `concepts/ui-intent-protocol/` with schema, adapter, reference renderer, and PDCA doc; Skill `skills/ui-intent-emit/` added for validated intent emission.
-- Workflow snapshots are stored locally under `ai_workflow_revisions/` (gitignored by default); current baseline `rev_008_current` was captured via `scripts/create-workflow-revision.sh` (see `docs/workflow-revisions.md` for required contents/numbering).
 - Key references: `AGENTS.md`, `docs/agents.md`, `docs/humans/workflow-guide.md`, `docs/context-management.md`, `docs/security.md`, `docs/access-manifest.md`, `docs/skills/skill-library-v1.md`, `specs/skill-library-v1.md`, `scripts/skillctl`, and `skills/README.md`.
 - Upstream metadata catalog for agent selection: `docs/skills/upstream-skillcards.anthropic.json`.
 - `skillctl` setup script creates `.venv-skillctl/` (ignored by git via `.gitignore`).
@@ -31,6 +33,7 @@
 - Added Skill `ui_governance` under `skills/ui-governance/` for UI governance constraints and capability gating.
 
 ## Recent Progress
+- Hardened post-task push enforcement (verify-sync guard, `push_hash` receipts, advisory post-commit hook) and swept inbox items into `todo.md`. Push hash: bccaacaa41a803e672e8f48c0c21c85226abf3c8. Skill: none. (ledger: 2025-12-27T23:51:38-08:00 — Push enforcement hardening).
 - Added Design Intent Schema concept (spec, schema, validator, tests, lifecycle docs). Spec: 193e018f-6875-4276-b503-2af48f6ec37b. Skill: none. Stack: Python. (ledger: 2025-12-26T00:23:48-08:00 — Design Intent Schema concept).
 - Added human-friendly glossary and concepts map, linking them from README, HUMAN_START_HERE, and the wiki index. Skill: none. (ledger: 2025-12-24T13:58:44-08:00 — Human-friendly glossary and wiki clarifications).
 - Added context management deep dive doc and linked it from README and the wiki index. Skill: none. (ledger: 2025-12-24T13:58:44-08:00 — Human-friendly glossary and wiki clarifications).

@@ -12,7 +12,6 @@
 - [ ] Rename `ai_workflow_revisions` to `framework_revisions` for clarity across workflow docs and tooling.
 
 ## Current Focus
-- [ ] Commit and push the current workspace state to origin (housekeeping request).
 
 ## Next Features & Updates
 
